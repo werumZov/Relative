@@ -24,12 +24,12 @@ local Window = WindUI:CreateWindow({
     Author = "Maintained By Werumov & Paster",
     Folder = "NektoSakenScript",
     Size = UDim2.fromOffset(560, 460),
-    Transparent = false,
+    Transparent = true ,
     Theme = "Dark",
-    Resizable = false,
+    Resizable = true,
     SideBarWidth = 150,
     HideSearchBar = true,
-    ScrollBarEnabled = false,
+    ScrollBarEnabled = true,
 })
  
 -- Window toggle key
@@ -129,7 +129,7 @@ local guestTrackedPunchAnimations = {
 local guestAimTargets = {"Slasher", "c00lkidd", "JohnDoe", "1x1x1x1", "Noli", "Sixer", "Nosferatu"}
  
 local guestHumanoid, guestHRP = nil, nil
-local guestPunchAiming = false
+local guestPunchAiming = true
 local guestPunchLastTriggerTime = 0
 local guestOriginalWS, guestOriginalJP, guestOriginalAutoRotate = nil, nil, nil
 local guestAimConnection = nil
