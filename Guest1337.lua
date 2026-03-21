@@ -23,7 +23,7 @@ local Window = WindUI:CreateWindow({
     Icon = "sparkle",
     Author = "Maintained By Werumov & Paster",
     Folder = "NektoSakenScript",
-    Size = UDim2.fromOffset(350, 300),
+    Size = UDim2.fromOffset(560, 460),
     Transparent = false,
     Theme = "Dark",
     Resizable = false,
@@ -33,7 +33,7 @@ local Window = WindUI:CreateWindow({
 })
  
 -- Window toggle key
-Window:SetToggleKey(Enum.KeyCode.K)
+Window:SetToggleKey(KeybindUi)
  
 -- Window text font
 WindUI:SetFont("rbxasset://fonts/families/AccanthisADFStd.json")
@@ -716,5 +716,13 @@ InterfaceTab:Button({
     Locked = false,
     Callback = function()
         Window:Destroy()
+    end
+})
+local KeybindUi = InterfaceTab:Keybind({
+    Title = "Ui keybind",
+    Desc = "Keybind to open ui",
+    Value = "K",
+    Callback = function(v)
+        Window:SetToggleKey(Enum.KeyCode[v])
     end
 })
